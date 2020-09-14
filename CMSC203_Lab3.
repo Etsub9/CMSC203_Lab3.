@@ -1,0 +1,50 @@
+import java.util.Scanner;
+
+public class MovieDriver_ {
+
+	public static void main(String[] args) {
+		Scanner keyboard = new Scanner(System.in);
+		
+		 String movieName;
+		 int soldTickets;
+		 String movieRating; 
+		 String enterAnother; 
+		 char enter;
+		 
+		 Movie m = new Movie();
+
+		  do { 
+		 System.out.println("Enter the name of movie");
+		 movieName = keyboard.nextLine();
+		 m.setTitle(movieName);
+		
+		 System.out.println("Enter the rating of the movie");
+		 movieRating = keyboard.nextLine(); 
+		 m.setRating(movieRating);
+		 
+		 System.out.println("Enter the number of tickets sold for this movie");
+	     soldTickets = keyboard.nextInt();
+	     m.setSoldTickets(soldTickets);
+	     keyboard.nextLine();
+	     
+	     System.out.println(m.toString()); 
+	     
+	   
+	     System.out.println("Do you want enter another? ( yes or no)");
+		 enterAnother = keyboard.nextLine();
+		 
+		 enter = enterAnother.charAt(0);
+	     
+	    } while (enter == 'y'); 
+	   
+	      if ( enter == 'n') 
+	      {  
+		  System.out.println("Goodbye");
+		  
+		  
+	     }
+
+	
+	}
+
+}
